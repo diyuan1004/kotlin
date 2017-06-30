@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        app:theme="@style/ToolbarTheme">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="测亩仪"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+    </android.support.v7.widget.Toolbar>
+
+    <com.amap.api.maps.MapView
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar">
+
+    </com.amap.api.maps.MapView>
+
+    <TextView
+        android:id="@+id/area"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/toolbar"
+        android:background="@drawable/left_radius"
+        android:gravity="center"
+        android:padding="5dp"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/distance"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_below="@id/toolbar"
+        android:background="@drawable/right_radius"
+        android:gravity="center"
+        android:padding="5dp"
+        android:textSize="14sp" />
+
+
+    <com.jiagu.kotlintwo.view.LocationView
+        android:id="@+id/loc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/circle_border"
+        android:layout_below="@+id/area"
+        app:color="@color/white_f"
+        app:radius="9dp" />
+
+    <ImageView
+        android:id="@+id/mode"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_marginRight="2dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/block"
+        android:padding="2dp"
+        android:background="@drawable/circle_border"
+        android:layout_centerInParent="true"
+        android:textSize="19sp"
+        android:gravity="center"
+        android:layout_alignParentRight="true"/>
+
+
+    <TextView
+        android:id="@+id/cancel"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="20dp"
+        android:alpha="50"
+        android:background="@drawable/circle_border"
+        android:gravity="center"
+        android:text="撤 销"
+        android:textColor="@color/white_f"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/finish"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="30dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/circle_border"
+        android:gravity="center"
+        android:text="结 束"
+        android:textColor="@color/white_f"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/mark"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/p_circle_border"
+        android:gravity="center"
+        android:text="标   记"
+        android:textColor="@color/white_f"
+        android:textSize="18sp" />
+</RelativeLayout>
